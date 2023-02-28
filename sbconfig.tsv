@@ -1,65 +1,65 @@
 Key	Value	Devops Key	Description	Upstream Value
-APPID	"local.sunbird.portal"			
-sunbird_instance_name	"Sunbird"			
-PORTAL_API_WHITELIST_CHECK	"false"			
-PORTAL_SESSION_SECRET_KEY	["sunbird","ed48b0ce-5a92-11ed-9b6a-0242ac120002"]			
-PORTAL_PORT	3000			
-PORTAL_SESSION_STORE_TYPE	"in-memory"			
-PORTAL_CASSANDRA_CONSISTENCY_LEVEL	"one"			
-DEFAULT_TENANT	"sunbird"			
-DEFAULT_CHANNEL	"ntp"			
-sunbird_default_language	"en"			
-TENANT_CDN_URL	""			
-CONTENT_EDITORS_URL	{"COLLECTION_EDITOR":"","CONTENT_EDITOR":"","GENERIC_EDITOR":""}			
-sunbird_cloud_storage_provider	"azure"			
-PORTAL_CASSANDRA_REPLICATION_STRATEGY	"{\"class\":\"SimpleStrategy\",\"replication_factor\":1}"			
-KONG_DEVICE_REGISTER_ANONYMOUS_TOKEN	"true"			
-KONG_DEVICE_REGISTER_TOKEN	"false"			
-KONG_DEVICE_REGISTER_AUTH_TOKEN				
-sunbird_kong_refresh_token_api	"https://staging.sunbirded.org/auth/v1/refresh/token"			
-sunbird_anonymous_default_token				
-sunbird_anonymous_device_register_api	"https://staging.sunbirded.org/api/api-manager/v2/consumer/portal_anonymous/credential/register"			
-sunbird_anonymous_register_token				
-sunbird_azure_account_name	"sunbirdstagingprivate"			
-sunbird_azure_account_key	"test"			
-sunbird_azure_report_container_name	"reports"			
-sunbird_azure_resourceBundle_container_name	"label"			
-KEYCLOAK_GOOGLE_ANDROID_CLIENT	{"clientId":"clientId","secret":"secret"}			
-KEYCLOAK_GOOGLE_IOS_CLIENT	{"clientId":"clientId","secret":"secret"}			
-KEYCLOAK_GOOGLE_DESKTOP_CLIENT	{"clientId":"clientId","secret":"secret"}			
-KEYCLOAK_TRAMPOLINE_ANDROID_CLIENT	{"clientId":"clientId","secret":"secret"}			
-KEYCLOAK_TRAMPOLINE_DESKTOP_CLIENT	{"clientId":"clientId","secret":"secret"}			
-KEYCLOAK_ANDROID_CLIENT	{"clientId":"android"}			
+APPID	"local.sunbird.portal"		This decribes which type of the application  ex: local, dev, staging, prod this is useful when we attach this with the telemetry ex: pdata:  {id: "staging.sunbird.portal", ver: "5.2.0", pid: "sunbird-portal"}	
+sunbird_instance_name	"Sunbird"		This is the name given to the instance running	
+PORTAL_API_WHITELIST_CHECK	"false"		This variable is used to enable API whitelisting and role check 	
+PORTAL_SESSION_SECRET_KEY	["sunbird","ed48b0ce-5a92-11ed-9b6a-0242ac120002"]		Express session secret used to sign the session ID cookie	
+PORTAL_PORT	3000		Default port that has to be used to run the portal	
+PORTAL_SESSION_STORE_TYPE	"in-memory"		Tells about the location of the session storage for the portal	
+PORTAL_CASSANDRA_CONSISTENCY_LEVEL	"one"		Tells about the minimum number of Cassandra nodes that must acknowledge a read or write operation before the operation can be considered successful.	
+DEFAULT_TENANT	"sunbird"		Default Tenant that has to be used in the portal	
+DEFAULT_CHANNEL	"ntp"		Default channel that has to be used in the portal	
+sunbird_default_language	"en"		Default language that has to be used in the portal	
+TENANT_CDN_URL	""		URL for the CDN for the tenant	
+CONTENT_EDITORS_URL	{"COLLECTION_EDITOR":"","CONTENT_EDITOR":"","GENERIC_EDITOR":""}		Collection Editor URL configurations	
+sunbird_cloud_storage_provider	"azure"		This tells about the storage service provider that has to be used in the portal. Eg:'azure','aws','gcp'	
+PORTAL_CASSANDRA_REPLICATION_STRATEGY	"{\"class\":\"SimpleStrategy\",\"replication_factor\":1}"		A replication strategy determines the nodes where replicas are placed. The total number of replicas across the cluster is referred to as the replication factor. A replication factor of 1 means that there is only one copy of each row in the cluster. If the node containing the row goes down, the row cannot be retrieved. A replication factor of 2 means two copies of each row, where each copy is on a different node.	
+KONG_DEVICE_REGISTER_ANONYMOUS_TOKEN	"true"		Enabling/ Disabling anonymous device registration	
+KONG_DEVICE_REGISTER_TOKEN	"false"		Kong token for device registration	
+KONG_DEVICE_REGISTER_AUTH_TOKEN		env.sunbird_kong_device_register_token	Kong token for device registration authentication token	
+sunbird_kong_refresh_token_api	"https://staging.sunbirded.org/auth/v1/refresh/token"		API for refreshing the kong token	
+sunbird_anonymous_default_token		env.sunbird_anonymous_default_token	Default token that will be used to register the anonymous user	
+sunbird_anonymous_device_register_api	"https://staging.sunbirded.org/api/api-manager/v2/consumer/portal_anonymous/credential/register"		API for registering the anonymous user	
+sunbird_anonymous_register_token		env.sunbird_anonymous_register_token	Token used for registering the anonymous user	
+sunbird_azure_account_name	"sunbirdstagingprivate"		Azure BLOB storage name	
+sunbird_azure_account_key	"test"		Azure Account key	
+sunbird_azure_report_container_name	"reports"		Azure report container name	
+sunbird_azure_resourceBundle_container_name	"label"		Azure labels container name	
+KEYCLOAK_GOOGLE_ANDROID_CLIENT	{"clientId":"clientId","secret":"secret"}		ClientID and Secret for Google Android Client	
+KEYCLOAK_GOOGLE_IOS_CLIENT	{"clientId":"clientId","secret":"secret"}		ClientID and Secret for Google IOS Client	
+KEYCLOAK_GOOGLE_DESKTOP_CLIENT	{"clientId":"clientId","secret":"secret"}		ClientID and Secret for Google Desktop Client	
+KEYCLOAK_TRAMPOLINE_ANDROID_CLIENT	{"clientId":"clientId","secret":"secret"}		ClientID and Secret for Trampoline Android Client. Used for State sign-in	
+KEYCLOAK_TRAMPOLINE_DESKTOP_CLIENT	{"clientId":"clientId","secret":"secret"}		ClientID and Secret for Trampoline Desktop Client. Used for State sign-in	
+KEYCLOAK_ANDROID_CLIENT	{"clientId":"android"}		ClientID  for Android Client.	
 KEYCLOAK_GOOGLE_CLIENT	{"clientId":"google-auth","secret":"2bbdd3e0-dfd1-4b88-ab6a-8f1a0c659ab0"}			
 PORTAL_REALM	"sunbird"			
-PORTAL_AUTH_SERVER_URL	"https://staging.sunbirded.org/auth"			
+PORTAL_AUTH_SERVER_URL	"https://staging.sunbirded.org/auth"		URL for portal Authentication	
 PORTAL_AUTH_SERVER_CLIENT	"portal"			
-REPORT_SERVICE_URL	"https://staging.sunbirded.org/api/data/v1/report-service"			
-CONTENT_URL	"https://staging.sunbirded.org/api/"			
-DATASERVICE_URL	"https://staging.sunbirded.org/api/"			
-discussions_middleware	"http://discussionsmw-service:3002"			
-uci_service_base_url	"http://kong:8000"			
-LEARNER_URL	"https://staging.sunbirded.org/api/"			
-learner_Service_Local_BaseUrl	"http://learner-service:9000"			
-TELEMETRY_SERVICE_LOCAL_URL	"http://telemetry-service:9001/"			
+REPORT_SERVICE_URL	"https://staging.sunbirded.org/api/data/v1/report-service"		URL for report service	
+CONTENT_URL	"https://staging.sunbirded.org/api/"		Base URL for content service	
+DATASERVICE_URL	"https://staging.sunbirded.org/api/"		Base URL for data service	
+discussions_middleware	"http://discussionsmw-service:3002"		URL for discussions service	
+uci_service_base_url	"http://kong:8000"		URL for UCI service	
+LEARNER_URL	"https://staging.sunbirded.org/api/"		Base URL for learner service	
+learner_Service_Local_BaseUrl	"http://learner-service:9000"		URL for learner service	
+TELEMETRY_SERVICE_LOCAL_URL	"http://telemetry-service:9001/"		URL for telemetry service	
 CONTENT_PROXY_URL	"https://staging.sunbirded.org"			
 PORTAL_EXT_PLUGIN_URL	"http://player_player:3000/plugin/"			
 CONTENT_SERVICE_UPSTREAM_URL	"http://localhost:5000/"			
 LEARNER_SERVICE_UPSTREAM_URL	"http://localhost:9000/"			
-content_Service_Local_BaseUrl	"http://content_service_content_service:5000"			
-sunbird_device_api	"https://staging.sunbirded.org/api/"			
-sunbird_kid_public_key_base_path	"/keys/"			
-sunbird_data_product_service	"https://staging.sunbirded.org"			
-sunbird_loggedin_device_register_api	"https://staging.sunbirded.org/api/api-manager/v2/consumer/portal_loggedin/credential/register"			
-sunbird_loggedin_register_token				
-sunbird_logged_default_token				
-PORTAL_API_AUTH_TOKEN				
-sunbird_anonymous_session_ttl	600000			
-sunbird_session_ttl	86400000			
-CACHE_STORE	"memory"			
-CACHE_TTL	1800			
-sunbird_portal_health_check_enabled	"true"			
-sunbird_learner_service_health_status	"true"			
-sunbird_content_service_health_status	"true"			
-sunbird_portal_cassandra_db_health_status	"true"			
-PORTAL_CASSANDRA_URLS	["localhost:9042"]			
+content_Service_Local_BaseUrl	"http://content_service_content_service:5000"		Local URL for content service	
+sunbird_device_api	"https://staging.sunbirded.org/api/"		Base URL for APIs in the portal	
+sunbird_kid_public_key_base_path	"/keys/"		Base path for storing keys in the portal	
+sunbird_data_product_service	"https://staging.sunbirded.org"		Portal base URL for data product service	
+sunbird_loggedin_device_register_api	"https://staging.sunbirded.org/api/api-manager/v2/consumer/portal_loggedin/credential/register"		API for registering the logged in user	
+sunbird_loggedin_register_token		env.sunbird_loggedin_register_token	Token used for registering the logged in user	
+sunbird_logged_default_token		env.sunbird_logged_default_token	Default token that will be used to register the logged in user	
+PORTAL_API_AUTH_TOKEN		env.sunbird_api_auth_token	Authentication token used for accessing APIs in the portal	
+sunbird_anonymous_session_ttl	600000		TTL for session for anonymous user in the portal	
+sunbird_session_ttl	86400000		TTL for session in the portal	
+CACHE_STORE	"memory"		Cache storage location	
+CACHE_TTL	1800		TTL for cache	
+sunbird_portal_health_check_enabled	"true"		Enabling/ Disabling healthcheck for portal	
+sunbird_learner_service_health_status	"true"		Enabling/ Disabling healthcheck for learner service	
+sunbird_content_service_health_status	"true"		Enabling/ Disabling healthcheck for content service	
+sunbird_portal_cassandra_db_health_status	"true"		Enabling/ Disabling healthcheck for Cassandra DB	
+PORTAL_CASSANDRA_URLS	["localhost:9042"]		Local Cassandra URL	
