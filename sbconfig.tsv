@@ -1,0 +1,65 @@
+Key	Value	Devops Key	Description	Upstream Value
+APPID	"local.sunbird.portal"			
+sunbird_instance_name	"Sunbird"			
+PORTAL_API_WHITELIST_CHECK	"false"			
+PORTAL_SESSION_SECRET_KEY	["sunbird","ed48b0ce-5a92-11ed-9b6a-0242ac120002"]			
+PORTAL_PORT	3000			
+PORTAL_SESSION_STORE_TYPE	"in-memory"			
+PORTAL_CASSANDRA_CONSISTENCY_LEVEL	"one"			
+DEFAULT_TENANT	"sunbird"			
+DEFAULT_CHANNEL	"ntp"			
+sunbird_default_language	"en"			
+TENANT_CDN_URL	""			
+CONTENT_EDITORS_URL	{"COLLECTION_EDITOR":"","CONTENT_EDITOR":"","GENERIC_EDITOR":""}			
+sunbird_cloud_storage_provider	"azure"			
+PORTAL_CASSANDRA_REPLICATION_STRATEGY	"{\"class\":\"SimpleStrategy\",\"replication_factor\":1}"			
+KONG_DEVICE_REGISTER_ANONYMOUS_TOKEN	"true"			
+KONG_DEVICE_REGISTER_TOKEN	"false"			
+KONG_DEVICE_REGISTER_AUTH_TOKEN				
+sunbird_kong_refresh_token_api	"https://staging.sunbirded.org/auth/v1/refresh/token"			
+sunbird_anonymous_default_token				
+sunbird_anonymous_device_register_api	"https://staging.sunbirded.org/api/api-manager/v2/consumer/portal_anonymous/credential/register"			
+sunbird_anonymous_register_token				
+sunbird_azure_account_name	"sunbirdstagingprivate"			
+sunbird_azure_account_key	"test"			
+sunbird_azure_report_container_name	"reports"			
+sunbird_azure_resourceBundle_container_name	"label"			
+KEYCLOAK_GOOGLE_ANDROID_CLIENT	{"clientId":"clientId","secret":"secret"}			
+KEYCLOAK_GOOGLE_IOS_CLIENT	{"clientId":"clientId","secret":"secret"}			
+KEYCLOAK_GOOGLE_DESKTOP_CLIENT	{"clientId":"clientId","secret":"secret"}			
+KEYCLOAK_TRAMPOLINE_ANDROID_CLIENT	{"clientId":"clientId","secret":"secret"}			
+KEYCLOAK_TRAMPOLINE_DESKTOP_CLIENT	{"clientId":"clientId","secret":"secret"}			
+KEYCLOAK_ANDROID_CLIENT	{"clientId":"android"}			
+KEYCLOAK_GOOGLE_CLIENT	{"clientId":"google-auth","secret":"2bbdd3e0-dfd1-4b88-ab6a-8f1a0c659ab0"}			
+PORTAL_REALM	"sunbird"			
+PORTAL_AUTH_SERVER_URL	"https://staging.sunbirded.org/auth"			
+PORTAL_AUTH_SERVER_CLIENT	"portal"			
+REPORT_SERVICE_URL	"https://staging.sunbirded.org/api/data/v1/report-service"			
+CONTENT_URL	"https://staging.sunbirded.org/api/"			
+DATASERVICE_URL	"https://staging.sunbirded.org/api/"			
+discussions_middleware	"http://discussionsmw-service:3002"			
+uci_service_base_url	"http://kong:8000"			
+LEARNER_URL	"https://staging.sunbirded.org/api/"			
+learner_Service_Local_BaseUrl	"http://learner-service:9000"			
+TELEMETRY_SERVICE_LOCAL_URL	"http://telemetry-service:9001/"			
+CONTENT_PROXY_URL	"https://staging.sunbirded.org"			
+PORTAL_EXT_PLUGIN_URL	"http://player_player:3000/plugin/"			
+CONTENT_SERVICE_UPSTREAM_URL	"http://localhost:5000/"			
+LEARNER_SERVICE_UPSTREAM_URL	"http://localhost:9000/"			
+content_Service_Local_BaseUrl	"http://content_service_content_service:5000"			
+sunbird_device_api	"https://staging.sunbirded.org/api/"			
+sunbird_kid_public_key_base_path	"/keys/"			
+sunbird_data_product_service	"https://staging.sunbirded.org"			
+sunbird_loggedin_device_register_api	"https://staging.sunbirded.org/api/api-manager/v2/consumer/portal_loggedin/credential/register"			
+sunbird_loggedin_register_token				
+sunbird_logged_default_token				
+PORTAL_API_AUTH_TOKEN				
+sunbird_anonymous_session_ttl	600000			
+sunbird_session_ttl	86400000			
+CACHE_STORE	"memory"			
+CACHE_TTL	1800			
+sunbird_portal_health_check_enabled	"true"			
+sunbird_learner_service_health_status	"true"			
+sunbird_content_service_health_status	"true"			
+sunbird_portal_cassandra_db_health_status	"true"			
+PORTAL_CASSANDRA_URLS	["localhost:9042"]			
