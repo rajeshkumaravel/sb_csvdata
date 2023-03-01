@@ -15,11 +15,11 @@ sunbird_cloud_storage_provider	"azure"		This tells about the storage service pro
 PORTAL_CASSANDRA_REPLICATION_STRATEGY	"{\"class\":\"SimpleStrategy\",\"replication_factor\":1}"		A replication strategy determines the nodes where replicas are placed. The total number of replicas across the cluster is referred to as the replication factor. A replication factor of 1 means that there is only one copy of each row in the cluster. If the node containing the row goes down, the row cannot be retrieved. A replication factor of 2 means two copies of each row, where each copy is on a different node.	
 KONG_DEVICE_REGISTER_ANONYMOUS_TOKEN	"true"		Enabling/ Disabling anonymous device registration	
 KONG_DEVICE_REGISTER_TOKEN	"false"		Kong token for device registration	
-KONG_DEVICE_REGISTER_AUTH_TOKEN		env.sunbird_kong_device_register_token	Kong token for device registration authentication token	
+KONG_DEVICE_REGISTER_AUTH_TOKEN	"env.sunbird_kong_device_register_token"	env.sunbird_kong_device_register_token	Kong token for device registration authentication token	
 sunbird_kong_refresh_token_api	"https://staging.sunbirded.org/auth/v1/refresh/token"		API for refreshing the kong token	
-sunbird_anonymous_default_token		env.sunbird_anonymous_default_token	Default token that will be used to register the anonymous user	
+sunbird_anonymous_default_token	"env.sunbird_anonymous_default_token"	env.sunbird_anonymous_default_token	Default token that will be used to register the anonymous user	
 sunbird_anonymous_device_register_api	"https://staging.sunbirded.org/api/api-manager/v2/consumer/portal_anonymous/credential/register"		API for registering the anonymous user	
-sunbird_anonymous_register_token		env.sunbird_anonymous_register_token	Token used for registering the anonymous user	
+sunbird_anonymous_register_token	"env.sunbird_anonymous_register_token"	env.sunbird_anonymous_register_token	Token used for registering the anonymous user	
 sunbird_azure_account_name	"sunbirdstagingprivate"		Azure BLOB storage name	
 sunbird_azure_account_key	"test"		Azure Account key	
 sunbird_azure_report_container_name	"reports"		Azure report container name	
@@ -51,9 +51,9 @@ sunbird_device_api	"https://staging.sunbirded.org/api/"		Base URL for APIs in th
 sunbird_kid_public_key_base_path	"/keys/"		Base path for storing keys in the portal	
 sunbird_data_product_service	"https://staging.sunbirded.org"		Portal base URL for data product service	
 sunbird_loggedin_device_register_api	"https://staging.sunbirded.org/api/api-manager/v2/consumer/portal_loggedin/credential/register"		API for registering the logged in user	
-sunbird_loggedin_register_token		env.sunbird_loggedin_register_token	Token used for registering the logged in user	
-sunbird_logged_default_token		env.sunbird_logged_default_token	Default token that will be used to register the logged in user	
-PORTAL_API_AUTH_TOKEN		env.sunbird_api_auth_token	Authentication token used for accessing APIs in the portal	
+sunbird_loggedin_register_token	"env.sunbird_loggedin_register_token"	env.sunbird_loggedin_register_token	Token used for registering the logged in user	
+sunbird_logged_default_token	"env.sunbird_logged_default_token"	env.sunbird_logged_default_token	Fallback token in case of failure when generating logged in bearer token	
+PORTAL_API_AUTH_TOKEN	"env.sunbird_api_auth_token"	env.sunbird_api_auth_token	Authentication token used for accessing APIs in the portal	
 sunbird_anonymous_session_ttl	600000		TTL for session for anonymous user in the portal	
 sunbird_session_ttl	86400000		TTL for session in the portal	
 CACHE_STORE	"memory"		Cache storage location	
